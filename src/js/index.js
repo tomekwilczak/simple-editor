@@ -1,6 +1,6 @@
 import "../scss/main.scss";
 
-/* place your code below */
+/* Definicja zmiennych */
 
 const saveButton = document.querySelector(".save-button--js");
 const loadButton = document.querySelector(".load-button--js");
