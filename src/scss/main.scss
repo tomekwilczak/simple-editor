@@ -3,7 +3,7 @@
 
 body {
   background: var(--background-color);
-  color: var(--font-color);
+  color: var(--text-color);
   font-family: Open Sans, sans-serif;
   display: flex;
   flex-direction: column;
@@ -12,6 +12,8 @@ body {
   flex-wrap: wrap;
   min-height: 100vh;
   position: relative;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .neumorphic-shadow {
@@ -26,20 +28,29 @@ body {
     font-weight: 600;
     font-size: 44px;
     line-height: 64px;
-    color: var(--text-color);
+    color: var(--text-color2);
+    @media screen and (max-width: 767px) {
+      font-size: 28px;
+    }
   }
 }
 
 .main {
   display: block;
-  &__button-dark,
-  &__button-light {
+  &__button {
     padding: 10px;
     text-align: center;
     margin: 16px 0 0 16px;
     float: right;
+    color: var(--text-color);
   }
   &__button-dark {
+    background-color: #62d5ff;
+  }
+  &__button:hover,
+  &__button-dark:hover,
+  &__button:focus,
+  &__button-dark:focus {
     background-color: #489dcf;
   }
   &__form {
@@ -48,14 +59,15 @@ body {
     display: block;
     padding-bottom: 16px;
     font-size: 20px;
-    z-index: 1000;
   }
   &__textarea {
     // position: absolute;
     width: 544px;
     height: 168px;
-    z-index: 1;
     padding: 10px;
+    @media screen and (max-width: 767px) {
+      max-width: 300px;
+    }
     // left: 448px;
     // top: 224px;
     // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
