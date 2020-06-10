@@ -43,15 +43,17 @@ body {
     margin: 16px 0 0 16px;
     float: right;
     color: var(--text-color);
+    &:focus,
+    &:hover {
+      background-color: #489dcf;
+    }
   }
-  &__button-dark {
+  &__button--dark {
     background-color: #62d5ff;
-  }
-  &__button:hover,
-  &__button-dark:hover,
-  &__button:focus,
-  &__button-dark:focus {
-    background-color: #489dcf;
+    &:hover,
+    &:focus {
+      background-color: #489dcf;
+    }
   }
   &__form {
   }
