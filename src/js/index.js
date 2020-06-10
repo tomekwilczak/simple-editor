@@ -11,23 +11,25 @@ const textareaInput = document.querySelector(".textarea--js");
 const entry = localStorage.getItem("entry");
 let result = "";
 
+if (entry) {
+  result = entry;
+}
+
 // Jeśli localStorage istnieje, to pod result podpinamy entry (wartośc z localStorage), jeśli nie, to result zostaje pusty
 
 textareaInput.value = result;
 
 const save = () => {
-  console.log("klik w save");
+  //   console.log("klik w save");
   localStorage.setItem("entry", textareaInput.value);
-  if (entry) {
-    result = entry;
-  }
 };
 const load = () => {
-  console.log("klik w load");
+  //   console.log("klik w load");
   textareaInput.value = localStorage.getItem("entry", { entry });
 };
 
 const clear = () => {
+  //   console.log("klik w clear");
   textareaInput.value = localStorage.removeItem("entry", { entry });
   textareaInput.value = "";
 };

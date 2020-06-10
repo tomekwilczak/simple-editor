@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Editor</title>
+    <title>Prosty edytor</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
@@ -14,20 +14,28 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="header__heading">Simple editor</h1>
+      <h1 class="header__heading">Prosty edytor</h1>
     </header>
     <main class="main">
       <form class="main__form">
-        <label class="main__label" for="textarea">Wpisz treść:</label>
+        <label class="main__label" for="textarea">Notatki:</label>
         <textarea
-          class="main__textarea textarea--js"
+          class="main__textarea textarea--js neumorphic-shadow"
           id="textarea"
-          placeholder="Tu wpisz co Ci leży na sercu..."
+          placeholder="Tu wpisz co chcesz zapisać..."
         ></textarea>
       </form>
-      <button class="main__button-dark save-button--js">Zapisz</button>
-      <button class="main__button-light load-button--js">Wczytaj</button>
-      <button class="main__button-light clear-button--js">Wyczyść</button>
+      <div class="buttons">
+        <button class="main__button-dark save-button--js neumorphic-shadow">
+          Zapisz
+        </button>
+        <button class="main__button-light load-button--js neumorphic-shadow">
+          Wczytaj
+        </button>
+        <button class="main__button-light clear-button--js neumorphic-shadow">
+          Wyczyść
+        </button>
+      </div>
     </main>
   </body>
 </html>
