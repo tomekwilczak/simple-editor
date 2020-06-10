@@ -1,12 +1,12 @@
-![cover](https://cotenfrontend.pl/img/cover.png)
+![cover](/public/cover.png)
 
-# WTF Webpack Starter Kit 
+# Simple editor - playground
 
-Simple toolkit for your static websites development.
+Simple editor for testing usage of localstorage. Input field with 'Save', 'Load' and 'Clear' buttons.
 
 ## How to use it?
 
-Click on `Use this template` button to generate a new repository based on this starter kit. After that clone it to your computer, go to the project directory in console and type `npm install`.
+Clone the repo to your computer, go to the project directory in console and type `npm install`. To test the editor right something in the textarea field and click 'Save'. Go to Devtools/Application to see it saved properly there. You can 'Load' the stored value by clicking 'Load' button or remove it by clicking 'Clear'.
 
 ## Available scripts
 
