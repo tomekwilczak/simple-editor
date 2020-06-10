@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WTF: Webpack starter kit</title>
+    <title>Simple Editor</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
@@ -18,15 +18,16 @@
     </header>
     <main class="main">
       <form class="main__form">
-        <label class="main__label" for="textarea">Uwagi:</label>
+        <label class="main__label" for="textarea">Wpisz treść:</label>
         <textarea
-          class="main__textarea"
+          class="main__textarea textarea--js"
           id="textarea"
-          placeholder="Tu wpisz uwagi..."
+          placeholder="Tu wpisz co Ci leży na sercu..."
         ></textarea>
       </form>
-      <button class="main__button-dark">Save</button>
-      <button class="main__button-light">Load</button>
+      <button class="main__button-dark save-button--js">Zapisz</button>
+      <button class="main__button-light load-button--js">Wczytaj</button>
+      <button class="main__button-light clear-button--js">Wyczyść</button>
     </main>
   </body>
 </html>
