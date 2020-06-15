@@ -5,9 +5,10 @@ import "../scss/main.scss";
 const saveButton = document.querySelector(".save-button--js");
 const loadButton = document.querySelector(".load-button--js");
 const clearButton = document.querySelector(".clear-button--js");
-const textareaInput = document.querySelector(".textarea--js");
+const deleteButton = document.querySelector(".delete-button--js");
+const textarea = document.querySelector(".textarea--js");
 
-// Sprawdzamy czy localStorage istnieje
+// // Sprawdzamy czy localStorage istnieje
 const entry = localStorage.getItem("entry");
 let result = "";
 
@@ -15,25 +16,27 @@ if (entry) {
   result = entry;
 }
 
-// Jeśli localStorage istnieje, to pod result podpinamy entry (wartośc z localStorage), jeśli nie, to result zostaje pusty
+// // Jeśli localStorage istnieje, to pod result podpinamy entry (wartośc z localStorage), jeśli nie, to result zostaje pusty
 
-textareaInput.value = result;
+textarea.value = result;
 
-const save = () => {
-  //   console.log("klik w save");
-  localStorage.setItem("entry", textareaInput.value);
-};
-const load = () => {
-  //   console.log("klik w load");
-  textareaInput.value = localStorage.getItem("entry", { entry });
-};
+loadButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  textarea.value = localStorage.getItem("entry");
+});
 
-const clear = () => {
-  //   console.log("klik w clear");
-  textareaInput.value = localStorage.removeItem("entry", { entry });
-  textareaInput.value = "";
-};
+saveButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  localStorage.setItem("entry", textarea.value);
+});
 
-loadButton.addEventListener("click", load);
-saveButton.addEventListener("click", save);
-clearButton.addEventListener("click", clear);
+clearButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  textarea.value = "";
+});
+
+deleteButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  textarea.value = "";
+  textarea.value = localStorage.removeItem("entry");
+});

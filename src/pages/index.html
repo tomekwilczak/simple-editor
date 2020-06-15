@@ -14,25 +14,29 @@
       <header class="header">
         <h1 class="header__heading">Simple editor</h1>
       </header>
-      <form class="main__form">
-        <label class="main__label" for="textarea">Notes:</label>
+      <form class="form">
+        <label class="form__label" for="textarea">Notes:</label>
         <textarea
-          class="main__textarea textarea--js neumorphic-shadow"
+          class="form__textarea textarea--js neumorphic-shadow"
           id="textarea"
           placeholder="Just start typing here..."
         ></textarea>
+        <!-- <div class="buttons"></div> -->
+        <button
+          class="main__button main__button--dark save-button--js neumorphic-shadow"
+        >
+          Save
+        </button>
+        <button class="main__button load-button--js neumorphic-shadow">
+          Load
+        </button>
+        <button class="main__button clear-button--js neumorphic-shadow">
+          Clear
+        </button>
+        <button class="main__button delete-button--js neumorphic-shadow">
+          Delete
+        </button>
       </form>
-      <button
-        class="main__button main__button--dark save-button--js neumorphic-shadow"
-      >
-        Save
-      </button>
-      <button class="main__button load-button--js neumorphic-shadow">
-        Load
-      </button>
-      <button class="main__button clear-button--js neumorphic-shadow">
-        Clear
-      </button>
     </main>
   </body>
 </html>
