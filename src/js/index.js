@@ -37,6 +37,6 @@ clearButton.addEventListener("click", (e) => {
 
 deleteButton.addEventListener("click", (e) => {
   e.preventDefault();
-  textarea.value = "";
   textarea.value = localStorage.removeItem("entry");
+  textarea.value = "";
 });
